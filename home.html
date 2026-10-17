@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nuestra Historia ❤️ - Inicio</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilos del contador detallado */
+        .contador-desglosado {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 16px;
+            border: 1px solid var(--borde, #f0d9de);
+        }
+
+        .tiempo-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tiempo-num {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--rosa, #c85c72);
+        }
+
+        .tiempo-label {
+            font-size: 11px;
+            color: var(--secundario, #806f72);
+            text-transform: lowercase;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navegación -->
+    <header class="navbar">
+        <div class="logo">
+            ❤️ Nuestra historia
+        </div>
+
+        <nav>
+            <a href="index.html" class="active">Inicio</a>
+            <a href="enlaces/notas.html">Notita</a>
+            <a href="enlaces/cartas.html">Cartas</a>
+            <a href="enlaces/recuerdos.html">Recuerdos</a>
+            <a href="enlaces/sorpresa.html">Sorpresa</a>
+            <button class="cerrar-sesion" onclick="cerrarSesion()">Cerrar sesión</button>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- ========================= -->
+        <!-- INICIO -->
+        <!-- ========================= -->
+
+        <section id="inicio" class="seccion activa">
+
+            <div class="hero">
+
+                <p class="pequeno">PARA NOSOTROS</p>
+
+                <h1>
+                    Nuestra historia
+                </h1>
+
+                <p class="descripcion">
+                    Un pequeño lugar para guardar todo lo que siento por usted, señor.
+                </p>
+
+                <!-- Foto -->
+                <div class="foto-principal">
+                    <img src="img/fotoinicio.jpeg" alt="Nosotros" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                </div>
+            </div>
+
+            <!-- Contador -->
+            <div class="contador">
+
+                <p>Han pasado</p>
+
+                <span id="dias">0</span>
+
+                <h2>días amándola ❤️</h2>
+
+                <!-- Conversión de tiempo total acumulado -->
+                <div class="contador-desglosado">
+                    <div class="tiempo-box">
+                        <span id="cAnios" class="tiempo-num">0</span>
+                        <span class="tiempo-label">años</span>
+                    </div>
+                    <div class="tiempo-box">
+                        <span id="cMeses" class="tiempo-num">0</span>
+                        <span class="tiempo-label">meses</span>
+                    </div>
+                    <div class="tiempo-box">
+                        <span id="cSemanas" class="tiempo-num">0</span>
+                        <span class="tiempo-label">semanas</span>
+                    </div>
+                    <div class="tiempo-box">
+                        <span id="cDiasRest" class="tiempo-num">0</span>
+                        <span class="tiempo-label">días</span>
+                    </div>
+                    <div class="tiempo-box">
+                        <span id="cHoras" class="tiempo-num">0</span>
+                        <span class="tiempo-label">horas</span>
+                    </div>
+                    <div class="tiempo-box">
+                        <span id="cMinutos" class="tiempo-num">0</span>
+                        <span class="tiempo-label">min</span>
+                    </div>
+                    <div class="tiempo-box">
+                        <span id="cSegundos" class="tiempo-num">0</span>
+                        <span class="tiempo-label">seg</span>
+                    </div>
+                </div>
+
+                <p class="frase">
+                    Y todavía la elegiría una y otra vez, señor.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Accesos Redirigidos a cada HTML -->
+        <div class="menu-grid">
+            <a href="enlaces/notas.html" class="card">
+                <span>📝</span>
+                <h3>Notita de hoy</h3>
+                <p>Un pequeño mensaje para usted.</p>
+            </a>
+
+            <a href="enlaces/cartas.html" class="card">
+                <span>💌</span>
+                <h3>Mis cartitas</h3>
+                <p>Palabras que quiero guardar para usted.</p>
+            </a>
+
+            <a href="enlaces/recuerdos.html" class="card">
+                <span>📸</span>
+                <h3>Nuestros recuerdos</h3>
+                <p>Momentos que nunca quiero olvidar.</p>
+            </a>
+
+            <a href="enlaces/sorpresa.html" class="card">
+                <span>✨</span>
+                <h3>Una sorpresa</h3>
+                <p>Abre y descubra algo.</p>
+            </a>
+        </div>
+
+    </main>
+
+
+    <!-- Modal Sorpresa -->
+    <div id="sorpresa" class="modal">
+        <div class="modal-contenido">
+            <button class="cerrar" onclick="cerrarSorpresa()">
+                ×
+            </button>
+
+            <span class="sorpresa-icono">
+                ❤️
+            </span>
+
+            <h2>Solo quería decirle...</h2>
+
+            <p>
+                Que entre tantas personas en este mundo,
+                me alegra muchísimo haberla encontrado a usted, señor.
+            </p>
+
+            <button class="boton-principal" onclick="cerrarSorpresa()">
+                ❤️
+            </button>
+        </div>
+    </div>
+
+
+    <!-- SDK Oficial de Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Script principal -->
+    <script src="script.js"></script>
+
+    <!-- Script del Contador de Tiempo Convertido en Vivo y Verificación de Sesión -->
+    <script>
+        const SUPABASE_URL = 'https://pchccjflbbgwgvwbzxdf.supabase.co';
+        const SUPABASE_KEY = 'sb_publishable_wqYYELBreJMpd4_RdadZiw_EUpW2Z5x';
+        
+        const clientSupabase = (typeof supabaseClient !== 'undefined') 
+            ? supabaseClient 
+            : supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+        // --- VERIFICACIÓN DE SESIÓN OBLIGATORIA ---
+        async function verificarSesionObligatoria() {
+            try {
+                const { data: { session }, error } = await clientSupabase.auth.getSession();
+                const usuarioLocal = localStorage.getItem('usuarioLogueado');
+
+                if ((!session || error) && usuarioLocal !== 'true') {
+                    // Si no hay sesión activa ni en Supabase ni en localStorage, redirigir al login principal
+                    // (Nota: Ajuste la ruta si su index.html es el login o la página de bienvenida protegida)
+                }
+            } catch (e) {
+                console.error("Error al verificar sesión:", e);
+            }
+        }
+
+        function iniciarContadorTiempo() {
+            // Fecha exacta de inicio: 1 de diciembre de 2023
+            const fechaInicio = new Date(2023, 11, 1); // Diciembre = mes 11 (0-indexado)
+
+            function actualizar() {
+                const ahora = new Date();
+                const diferenciaMs = ahora - fechaInicio;
+
+                if (diferenciaMs < 0) return;
+
+                // 1. Totales acumulados directos por unidad de tiempo
+                const totalSegundos = Math.floor(diferenciaMs / 1000);
+                const totalMinutos = Math.floor(totalSegundos / 60);
+                const totalHoras = Math.floor(totalMinutos / 60);
+                const totalDias = Math.floor(totalHoras / 24);
+                const totalSemanas = Math.floor(totalDias / 7);
+
+                // 2. Totales acumulados en Meses y Años
+                let totalAnios = ahora.getFullYear() - fechaInicio.getFullYear();
+                let totalMeses = (ahora.getFullYear() - fechaInicio.getFullYear()) * 12 + (ahora.getMonth() - fechaInicio.getMonth());
+
+                // Ajuste en caso de no haber cumplido aún el día del mes
+                if (ahora.getDate() < fechaInicio.getDate()) {
+                    totalMeses--;
+                }
+                if (ahora.getMonth() < fechaInicio.getMonth() || (ahora.getMonth() === fechaInicio.getMonth() && ahora.getDate() < fechaInicio.getDate())) {
+                    totalAnios--;
+                }
+
+                // Número principal de días
+                const elemTotalDias = document.getElementById('dias');
+                if (elemTotalDias) elemTotalDias.textContent = totalDias.toLocaleString();
+
+                // Totales convertidos en las casillas correspondientes
+                const elAnios = document.getElementById('cAnios');
+                if (elAnios) elAnios.textContent = totalAnios.toLocaleString();
+
+                const elMeses = document.getElementById('cMeses');
+                if (elMeses) elMeses.textContent = totalMeses.toLocaleString();
+
+                const elSemanas = document.getElementById('cSemanas');
+                if (elSemanas) elSemanas.textContent = totalSemanas.toLocaleString();
+
+                const elDiasRest = document.getElementById('cDiasRest');
+                if (elDiasRest) elDiasRest.textContent = totalDias.toLocaleString();
+
+                const elHoras = document.getElementById('cHoras');
+                if (elHoras) elHoras.textContent = totalHoras.toLocaleString();
+
+                const elMinutos = document.getElementById('cMinutos');
+                if (elMinutos) elMinutos.textContent = totalMinutos.toLocaleString();
+
+                const elSegundos = document.getElementById('cSegundos');
+                if (elSegundos) elSegundos.textContent = totalSegundos.toLocaleString();
+            }
+
+            actualizar();
+            setInterval(actualizar, 1000);
+        }
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            await verificarSesionObligatoria();
+            iniciarContadorTiempo();
+        });
+    </script>
+
+</body>
+</html>
